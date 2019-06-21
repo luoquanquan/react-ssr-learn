@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  Link, Switch, Route, HashRouter,
+  Link, Route, HashRouter,
 } from 'react-router-dom'
 
 import Home from './Home.jsx'
