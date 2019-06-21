@@ -22,7 +22,10 @@
     "url": "https://github.com/luoquanquan/react-ssr-learn/issues"
   },
   "homepage": "https://github.com/luoquanquan/react-ssr-learn#readme",
-  "dependencies": {},
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
+  },
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
