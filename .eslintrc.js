@@ -19,6 +19,7 @@ module.exports = {
     'react',
   ],
   rules: {
-    semi: [2, 'never']
+    semi: [2, 'never'],
+    'import/extensions': 0
   },
 };
