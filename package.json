@@ -26,12 +26,14 @@
   "homepage": "https://github.com/luoquanquan/react-ssr-learn#readme",
   "dependencies": {
     "@babel/register": "^7.4.4",
+    "babel-polyfill": "^6.26.0",
     "babel-register": "^6.26.0",
     "koa": "^2.7.0",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1"
   },
   "devDependencies": {
