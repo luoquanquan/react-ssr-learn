@@ -1,6 +1,15 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.1.0](https://github.com/luoquanquan/react-ssr-learn/compare/v1.0.0...v1.1.0) (2019-06-22)
+
+
+### Features
+
+* 客户端渲染配置 react-router ([2eb112d](https://github.com/luoquanquan/react-ssr-learn/commit/2eb112d))
+
+
 
 # 1.0.0 (2019-06-21)
 
