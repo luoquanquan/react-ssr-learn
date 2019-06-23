@@ -8,7 +8,7 @@ import createStore from './store'
 const store = createStore(window.REDUX_DATA)
 
 // eslint-disable-next-line
-ReactDOM.render(
+ReactDOM.hydrate(
   <Provider store={store}>
     <BrowserRouter>
       <App />
