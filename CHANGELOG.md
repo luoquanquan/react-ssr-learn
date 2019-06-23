@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/luoquanquan/react-ssr-learn/compare/v1.1.0...v1.2.0) (2019-06-23)
+
+
+### Features
+
+* 服务端渲染完成 ([08ce9ae](https://github.com/luoquanquan/react-ssr-learn/commit/08ce9ae))
+* 服务端渲染支持首先加载异步接口作为首屏初始数据 ([6bba577](https://github.com/luoquanquan/react-ssr-learn/commit/6bba577))
+* 终端渲染配置 redux ([475e90a](https://github.com/luoquanquan/react-ssr-learn/commit/475e90a))
+
+
+
 ## [1.1.0](https://github.com/luoquanquan/react-ssr-learn/compare/v1.0.0...v1.1.0) (2019-06-22)
 
 
