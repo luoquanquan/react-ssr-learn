@@ -6,8 +6,9 @@ import React from 'react'
 import Router from 'koa-router'
 import { promisify } from 'util'
 import { renderToString } from 'react-dom/server'
-import { StaticRouter } from 'react-router-dom'
+import { StaticRouter, matchPath } from 'react-router-dom'
 import { Provider } from 'react-redux'
+import routes from './routes'
 import App from './components/App.jsx'
 import createStore, { init } from './store'
 
@@ -33,6 +34,7 @@ const generateHtmlStr = async (rNode, reduxState) => {
 
 const app = new Koa()
 const router = new Router()
+
 app.use(serve(path.resolve(__dirname, '../')))
 
 router.get('*', async (ctx) => {
@@ -44,6 +46,14 @@ router.get('*', async (ctx) => {
 
   // 初始化 store
   store.dispatch(init())
+
+  // 初始化时候是否访问异步接口
+  const dataRequireMents = routes.filter(page => matchPath(ctx.req.url, page))
+    .map(page => page.component).filter(comp => comp.serverFetch)
+    .map(comp => store.dispatch(comp.serverFetch()))
+
+  // 等待需要加载的异步接口都加载完了再渲染
+  if (dataRequireMents.length) await Promise.all(dataRequireMents)
 
   // 根节点
   const rNode = renderToString(

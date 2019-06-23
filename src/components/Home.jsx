@@ -34,6 +34,8 @@ class Home extends React.Component {
   }
 }
 
+Home.serverFetch = fetchData
+
 const mapDispatchToProps = { fetchData }
 
 const mapStateToProps = ({ songList }) => ({ songList })
