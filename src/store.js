@@ -3,14 +3,19 @@ import { createStore, combineReducers } from 'redux'
 // actionType
 const INITTYPE = 'INIT'
 const LOGIN = 'LOGIN'
+const LOGOUT = 'LOGOUT'
 
 // action
 export const init = () => ({
   type: INITTYPE,
 })
 
-export const login = () => ({
+export const logIn = () => ({
   type: LOGIN,
+})
+
+export const logOut = () => ({
+  type: LOGOUT,
 })
 
 // function reducer
@@ -20,6 +25,8 @@ const sessionReducer = (state = false, action) => {
       return true
     case LOGIN:
       return true
+    case LOGOUT:
+      return false
     default: return state
   }
 }

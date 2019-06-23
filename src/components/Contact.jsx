@@ -1,26 +1,23 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { login } from '../store'
+import { logIn, logOut } from '../store'
 
 const mapDispatchToProps = dispatch => ({
-  loggIn: () => dispatch(login()),
+  logIn: () => dispatch(logIn()),
+  logOut: () => dispatch(logOut()),
 })
 
 const mapStateToProps = ({ loggedIn }) => ({
   loggedIn,
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(props => (
+export default connect(mapStateToProps, mapDispatchToProps)(({ loggedIn, logOut, logIn }) => (
   <div>
     this page is the Contact
-    <button
-      type="primary"
-      onClick={() => {
-        console.log(props)
-        props.loggIn()
-      }}
-    >
-      logIn
-    </button>
+    {
+      loggedIn
+        ? <button onClick={() => { logOut() }}> logOut </button>
+        : <button onClick={() => { logIn() }}> logIn </button>
+    }
   </div>
 ))
