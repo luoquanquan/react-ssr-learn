@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/luoquanquan/react-ssr-learn/compare/v1.2.0...v1.3.0) (2019-06-23)
+
+
+### Features
+
+* 服务端渲染支持自定义 head 标签内部的信息 ([6861a34](https://github.com/luoquanquan/react-ssr-learn/commit/6861a34))
+
+
+
 ## [1.2.0](https://github.com/luoquanquan/react-ssr-learn/compare/v1.1.0...v1.2.0) (2019-06-23)
 
 
