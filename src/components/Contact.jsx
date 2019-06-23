@@ -11,6 +11,7 @@ const mapStateToProps = ({ loggedIn }) => ({
   loggedIn,
 })
 
+// eslint-disable-next-line
 export default connect(mapStateToProps, mapDispatchToProps)(({ loggedIn, logOut, logIn }) => (
   <div>
     this page is the Contact
