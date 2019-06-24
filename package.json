@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:client": "NODE_ENV=production webpack --progress",
     "dev:client": "webpack-dev-server",
-    "dev:server": "nodemon index.js",
+    "dev:server": "webpack --watch | nodemon index.js",
     "release": "standard-version",
     "release-f": "standard-version -f",
     "release-major": "standard-version -r major",
